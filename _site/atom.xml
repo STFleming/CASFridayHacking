@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>CASFridayHacking</title>
- <link href="/ops-sat/atom.xml" rel="self"/>
- <link href="/ops-sat/"/>
- <updated>2016-02-12T15:38:40+00:00</updated>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2016-02-12T15:40:45+00:00</updated>
  <id></id>
  <author>
    <name>Shane Fleming</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Example Blog post.</title>
-   <link href="/ops-sat/2016/02/12/ExamplePost/"/>
+   <link href="/2016/02/12/ExamplePost/"/>
    <updated>2016-02-12T00:00:00+00:00</updated>
    <id>/2016/02/12/ExamplePost</id>
    <content type="html">&lt;p&gt;This is an Example blog post!&lt;/p&gt;
