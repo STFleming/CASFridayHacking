@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>OPS-SAT@Imperial</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2016-02-03T10:17:06+00:00</updated>
+ <id></id>
+ <author>
+   <name>Shane Fleming</name>
+   <email>shane.fleming06@imperial.ac.uk</email>
+ </author>
+
+ 
+ <entry>
+   <title>The Ideal on board Processor</title>
+   <link href="/2016/02/01/ThePerfectOnboardProcessor/"/>
+   <updated>2016-02-01T00:00:00+00:00</updated>
+   <id>/2016/02/01/ThePerfectOnboardProcessor</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/imgs/HAL9000.svg&quot; alt=&quot;a misunderstood AI perhaps?&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What would the ideal on board spacecraft processor look like? Me and my colleague &lt;a href=&quot;http://cas.ee.ic.ac.uk/people/fw1811/&quot;&gt;Felix Winterstein&lt;/a&gt; feel that it would have the following properties:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;High Processing Power&lt;/li&gt;
+  &lt;li&gt;Low power/energy consumption&lt;/li&gt;
+  &lt;li&gt;Flexibility to change things “in orbit”&lt;/li&gt;
+  &lt;li&gt;Rad-hard&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-ideal-satellite-processor-would-have-high-processing-power&quot;&gt;The ideal satellite processor would have high processing power…&lt;/h4&gt;
+&lt;p&gt;High processing power is desirable in space applications but is often difficult to achieve.
+One example is compression algorithms, these computationally intensive algorithms are useful as they reduce the amount of downlinking required (transmission back to earth) .
+Such high processing power comes at a cost though, as fast CPUs generally use a lot of power and energy, taking us to our next point.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-ideal-satellite-processor-would-have-low-power-consumption&quot;&gt;The ideal satellite processor would have low power consumption…&lt;/h4&gt;
+&lt;p&gt;Power consumption and energy usage are huge constraints in satellite designs, generally because everything needs to be powered from small solar panels.
+The output from the solar panels is often not reliable; a tumbling satellite might not get full exposure to the sun, and power production degrades over time due to exposure to radiation.
+This often requires a great deal of power &lt;em&gt;“slack”&lt;/em&gt; further reducing the power/energy available for processing.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-ideal-satellite-processor-would-be-flexible&quot;&gt;The ideal satellite processor would be flexible…&lt;/h4&gt;
+&lt;p&gt;Low Earth Orbit is a pretty difficult place to reach, and when designing big complex systems mistakes
+happen and situations change.
+In this regard software is great because it is flexible, patches/fixes can be tested on the ground and
+applied to the craft remotely.
+However hardware is inflexible, for example if a silicon bug causes an interrupt to occur with an incorrect priority then it might not be detected
+during ground testing but could cause uncorrectable problems in orbit.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-ideal-satellite-processor-would-be-rad-hard&quot;&gt;The ideal satellite processor would be Rad-Hard…&lt;/h4&gt;
+&lt;p&gt;Rad-Hard refers to radiation hardened, but is becoming a more general term for reliable, fault tolerant, electronics.
+Radiation is a problem for on board computers as unwanted energy can cause memory bits
+to flip from 1 to 0, or 0 to 1.
+This radiation is usually in the form of high energy energy ionizing particles that are caught in the
+earths magnetic field or emitted during high energy events such as a coronal mass ejection.
+Memory circuits, such as SRAM cells, are particularity sensitive to faults from this type of radiation
+and for this reason cache memories are often heavily rad protected in space computers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/imgs/fpga.png&quot; alt=&quot;an FPGA!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How do &lt;strong&gt;FPGAs&lt;/strong&gt; compare against the ideal processor:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;FPGAs have high processing power&lt;/em&gt; - &lt;strong&gt;True&lt;/strong&gt; for certain applications. They are great at parallel processing, this makes them great for applications like medical imaging or digital signal processing.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;FPGAs have low power/energy consumption&lt;/em&gt; - &lt;strong&gt;True&lt;/strong&gt; in fact microsoft have been using &lt;a href=&quot;http://research.microsoft.com/en-us/projects/catapult/&quot;&gt;FPGAs in their Bing&lt;/a&gt; search engine for this very reason.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;FPGAs are flexible&lt;/em&gt; - &lt;strong&gt;True&lt;/strong&gt; Once deployed FPGAs can be reprogrammed to perform a completely different task. (They even have “field programmable” in their name)&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The arrival of the MityARM at Imperial</title>
+   <link href="/2016/01/27/MityArm/"/>
+   <updated>2016-01-27T00:00:00+00:00</updated>
+   <id>/2016/01/27/MityArm</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/imgs/MityARM.png&quot; alt=&quot;The MityARM development board&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Despite OPS-SAT being a CubeSat, weighing in at only 6Kg, its computational
+ability will be more than ten times anything currently in the European Space Agencies fleet.
+One of the computational units, which just got delivered to our research group, can be seen in the picture above.
+This is a critical links MityARM SoC (system on chip) development board, and is one of four that will
+make up OPS-SATs computation payload.&lt;/p&gt;
+
+&lt;p&gt;One of the reason that this mission will be computationally more powerful than any other is
+because it is using commercial off the shelf components (COTS). This means that instead of components
+being custom made (the usual approach in satellite design) general
+purpose ones were bought. COTS dramatically reduce the costs but there is one major issue in using them, radiation.&lt;/p&gt;
+
+&lt;p&gt;High energy particles emitted from the sun and/or trapped in the Earths magnetic field can disrupt
+electronics in orbit. When one of these particles strikes a device it can cause what is known as
+a Single Event Upset (SEU), flipping a bit from a 1 to a 0, or 0 to a 1. This unintended change in
+state can have catastrophic consequences, for example the TDRS-1 communication satellite experienced
+SEUs in its Attitude Control System (ACS), luckily ground control was able to prevent the satellite from
+tumbling and maintain its proper attitude.&lt;/p&gt;
+
+&lt;p&gt;The MityARM SoCs in OPS-SATs payload are particularity vulnerable to the effect of high energy particles
+because they contain an electronic device known as an FPGA (Field Programmable Gate Array).
+Think of an FPGA as a blank digital circuit that you can reprogram, sort of like a “soft” digital circuit,
+where the description of this circuit is held in an SRAM. SRAMs are highly sensitive to SEUs and in an FPGA any
+bit flip can not only alter data but alter the structure of the soft circuit.&lt;/p&gt;
+
+&lt;p&gt;Our work aims to explore just how sensitive these modern COTS FPGAs are to high energy particles in orbit.
+Through building test circuits and monitoring the systems behaviour we hope to be able to provide a
+comprehensive data set for future space FPGA designers to use.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
