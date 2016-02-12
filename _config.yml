@@ -13,7 +13,7 @@ tagline:             documenting the ICL circuits and systems hack sessions
 url:
 paginate: 5
 paginate_path: "page:num"
-baseurl:             "/ops-sat"
+baseurl:             "/CASFridayHacking"
 
 #Pages
 page_list:
